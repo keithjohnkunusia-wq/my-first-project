@@ -34,3 +34,9 @@ button {
 button:hover {
     background-color: #2ea043;
 }
+.profile-pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-top: 20px;
+  }
