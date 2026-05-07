@@ -13,6 +13,7 @@
     <img src="Images/image keith.png" alt="My Photo" class="profile-pic">
 
     <h1>Hi, I'm Keith 👋</h1>
+
     <a href="#about">
         <button>About Me ↓</button>
     </a>
@@ -32,33 +33,45 @@
     </a>
 
     <section id="about" class="about hidden">
+
         <h2>About Me</h2>
 
         <p>
             I am Keith, an aspiring software developer passionate about
             web development, technology, and creating modern websites.
         </p>
+
     </section>
 
-    <section class="skills hidden"></section>
+    <section class="skills hidden">
+
         <h2>My Skills</h2>
 
         <div class="skill-box">HTML</div>
         <div class="skill-box">CSS</div>
         <div class="skill-box">Git & GitHub</div>
         <div class="skill-box">JavaScript (Learning)</div>
+
     </section>
 
-    <section class="projects hidden"></section>
+    <section class="projects hidden">
+
         <h2>Projects</h2>
 
         <div class="project-card">
+
             <h3>My First Portfolio Website</h3>
-            <p>A personal portfolio website hosted on GitHub Pages.</p>
+
+            <p>
+                A personal portfolio website hosted on GitHub Pages.
+            </p>
+
         </div>
+
     </section>
 
-    <section class="socials hidden"></section>
+    <section class="socials hidden">
+
         <h2>Connect With Me</h2>
 
         <div class="social-links">
@@ -80,6 +93,7 @@
             </a>
 
         </div>
+
     </section>
 
     <a href="Keith-CV.pdf" download>
@@ -129,17 +143,23 @@
         setTimeout(() => {
             typeText2();
         }, 3500);
+
         const hiddenElements = document.querySelectorAll(".hidden");
 
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-            entry.target.classList.add("show");
-        }
-    });
-});
+        const observer = new IntersectionObserver((entries) => {
 
-hiddenElements.forEach((el) => observer.observe(el));
+            entries.forEach((entry) => {
+
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("show");
+                }
+
+            });
+
+        });
+
+        hiddenElements.forEach((el) => observer.observe(el));
+
     </script>
 
 </body>

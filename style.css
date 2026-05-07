@@ -5,8 +5,13 @@ body {
     font-family: Arial, sans-serif;
 }
 
-img {
+html {
+    scroll-behavior: smooth;
+}
+
+.profile-pic {
     width: 150px;
+    height: 150px;
     border-radius: 50%;
     margin-top: 20px;
 }
@@ -16,37 +21,18 @@ h1 {
     font-size: 32px;
 }
 
+h2 {
+    color: #4CAF50;
+    margin-bottom: 20px;
+}
+
 p {
     font-size: 18px;
     color: #c9d1d9;
 }
-button {
-    background-color: #238636;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    margin: 10px;
-    border-radius: 6px;
-    cursor: pointer;
-    font-size: 16px;
-}
 
-button:hover {
-    background-color: #2ea043;
-}
-.profile-pic {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    margin-top: 20px;
-  }
-  section {
-    margin-top: 50px;
-}
-
-h2 {
-    color: #4CAF50;
-    margin-bottom: 20px;
+section {
+    padding: 50px 20px;
 }
 
 .about p {
@@ -72,21 +58,35 @@ h2 {
     cursor: pointer;
     border: 1px solid #333;
 }
+
 .project-card:hover {
     transform: translateY(-10px);
     box-shadow: 0 10px 25px rgba(0, 255, 100, 0.3);
 }
+
+button {
+    background-color: #238636;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 10px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.3s ease;
 }
+
+button:hover {
+    background-color: #2ea043;
+    transform: scale(1.05);
+}
+
 #theme-toggle {
     position: fixed;
     top: 20px;
     right: 20px;
     padding: 10px 15px;
-    border: none;
     border-radius: 10px;
-    background: #4CAF50;
-    color: white;
-    cursor: pointer;
     font-weight: bold;
 }
 
@@ -100,33 +100,7 @@ h2 {
     background-color: #f4f4f4;
     color: black;
 }
-html {
-    scroll-behavior: smooth;
-}
-section {
-    animation: fadeInUp 1s ease;
-}
 
-@keyframes fadeInUp {
-
-    from {
-        opacity: 0;
-        transform: translateY(40px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-button {
-    transition: 0.3s ease;
-}
-
-button:hover {
-    transform: scale(1.05);
-}
 .hidden {
     opacity: 0;
     transform: translateY(50px);
