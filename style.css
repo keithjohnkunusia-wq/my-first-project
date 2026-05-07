@@ -11,8 +11,48 @@ html {
     scroll-behavior: smooth;
 }
 
+/* NAVBAR */
+
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #161b22;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    z-index: 1000;
+    box-sizing: border-box;
+}
+
+.logo {
+    color: #4CAF50;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #4CAF50;
+}
+
+/* HERO SECTION */
+
 .hero {
-    padding: 80px 20px;
+    padding: 140px 20px 80px;
 }
 
 .profile-pic {
@@ -50,6 +90,8 @@ section {
     margin: auto;
 }
 
+/* SKILLS */
+
 .skill-box {
     display: inline-block;
     background-color: #161b22;
@@ -64,6 +106,8 @@ section {
     transform: translateY(-5px);
     background-color: #238636;
 }
+
+/* PROJECTS */
 
 .project-card {
     background-color: #161b22;
@@ -80,6 +124,8 @@ section {
     transform: translateY(-10px);
     box-shadow: 0 10px 25px rgba(0, 255, 100, 0.3);
 }
+
+/* BUTTONS */
 
 button {
     background-color: #238636;
@@ -105,7 +151,7 @@ button:hover {
 
 #theme-toggle {
     position: fixed;
-    top: 20px;
+    top: 80px;
     right: 20px;
     padding: 10px 15px;
     border-radius: 10px;
@@ -118,6 +164,8 @@ button:hover {
     padding: 14px 28px;
 }
 
+/* LIGHT MODE */
+
 .light-mode {
     background-color: white;
     color: black;
@@ -128,10 +176,17 @@ button:hover {
 }
 
 .light-mode .project-card,
-.light-mode .skill-box {
+.light-mode .skill-box,
+.light-mode .navbar {
     background-color: #f4f4f4;
     color: black;
 }
+
+.light-mode .nav-links a {
+    color: black;
+}
+
+/* ANIMATIONS */
 
 .hidden {
     opacity: 0;
@@ -143,7 +198,22 @@ button:hover {
     opacity: 1;
     transform: translateY(0);
 }
+
+/* RESPONSIVE DESIGN */
+
 @media (max-width: 768px) {
+
+    .navbar {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 15px;
+        margin-top: 10px;
+        padding: 0;
+    }
 
     h1 {
         font-size: 30px;
@@ -188,4 +258,7 @@ button:hover {
         align-items: center;
     }
 
+    #theme-toggle {
+        top: 20px;
+    }
 }
