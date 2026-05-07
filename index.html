@@ -13,9 +13,9 @@
 
     <h1>Hi, I'm Keith 👋</h1>
 
-    <p>Aspiring Software Developer 💻</p>
+    <p id="typing-text"></p>  
 
-    <p>Welcome to my first website 🚀</p>
+    <p id="typing-text2"></p>
 
     <a href="https://github.com/keithjohnkunusia-wq" target="_blank">
         <button>View My GitHub</button>
@@ -79,12 +79,43 @@
     </a>
     
     <script>
-    const button = document.getElementById("theme-toggle");
-    
-    button.addEventListener("click", function () {
-        document.body.classList.toggle("light-mode");
-    });
-    </script>
+  <script>
+
+const button = document.getElementById("theme-toggle");
+
+button.addEventListener("click", function () {
+    document.body.classList.toggle("light-mode");
+});
+
+const text1 = "Aspiring Software Developer 💻";
+const text2 = "Welcome to my first website 🚀";
+
+let index1 = 0;
+let index2 = 0;
+
+function typeText1() {
+    if(index1 < text1.length) {
+        document.getElementById("typing-text").innerHTML += text1.charAt(index1);
+        index1++;
+        setTimeout(typeText1, 100);
+    }
+}
+
+function typeText2() {
+    if(index2 < text2.length) {
+        document.getElementById("typing-text2").innerHTML += text2.charAt(index2);
+        index2++;
+        setTimeout(typeText2, 100);
+    }
+}
+
+typeText1();
+
+setTimeout(() => {
+    typeText2();
+}, 3500);
+
+</script>
 
 </body>
 </html>
