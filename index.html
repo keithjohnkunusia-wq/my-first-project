@@ -31,7 +31,7 @@
         <button>Contact Me</button>
     </a>
 
-    <section id="about" class="about"></section>
+    <section id="about" class="about hidden">
         <h2>About Me</h2>
 
         <p>
@@ -40,7 +40,7 @@
         </p>
     </section>
 
-    <section class="skills">
+    <section class="skills hidden"></section>
         <h2>My Skills</h2>
 
         <div class="skill-box">HTML</div>
@@ -49,7 +49,7 @@
         <div class="skill-box">JavaScript (Learning)</div>
     </section>
 
-    <section class="projects">
+    <section class="projects hidden"></section>
         <h2>Projects</h2>
 
         <div class="project-card">
@@ -58,7 +58,7 @@
         </div>
     </section>
 
-    <section class="socials">
+    <section class="socials hidden"></section>
         <h2>Connect With Me</h2>
 
         <div class="social-links">
@@ -129,7 +129,17 @@
         setTimeout(() => {
             typeText2();
         }, 3500);
+        const hiddenElements = document.querySelectorAll(".hidden");
 
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add("show");
+        }
+    });
+});
+
+hiddenElements.forEach((el) => observer.observe(el));
     </script>
 
 </body>
