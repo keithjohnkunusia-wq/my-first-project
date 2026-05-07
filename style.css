@@ -72,3 +72,26 @@ h2 {
     border-radius: 10px;
     border: 1px solid #333;
 }
+#theme-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 10px;
+    background: #4CAF50;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.light-mode {
+    background-color: white;
+    color: black;
+}
+
+.light-mode section,
+.light-mode .project-card {
+    background-color: #f4f4f4;
+    color: black;
+}
