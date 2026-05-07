@@ -143,3 +143,49 @@ button:hover {
     opacity: 1;
     transform: translateY(0);
 }
+@media (max-width: 768px) {
+
+    h1 {
+        font-size: 30px;
+    }
+
+    h2 {
+        font-size: 26px;
+    }
+
+    p {
+        font-size: 16px;
+    }
+
+    .about p {
+        width: 95%;
+    }
+
+    .project-card {
+        width: 90%;
+        padding: 20px;
+    }
+
+    .profile-pic {
+        width: 130px;
+        height: 130px;
+    }
+
+    button {
+        width: 90%;
+        max-width: 300px;
+    }
+
+    .skill-box {
+        display: block;
+        width: 80%;
+        margin: 10px auto;
+    }
+
+    .hero-buttons {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+}
