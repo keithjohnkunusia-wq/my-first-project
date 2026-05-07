@@ -262,3 +262,42 @@ button:hover {
         top: 20px;
     }
 }
+.footer {
+    background-color: #161b22;
+    padding: 40px 20px;
+    margin-top: 80px;
+    text-align: center;
+    border-top: 1px solid #333;
+}
+
+.footer h3 {
+    color: #4CAF50;
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.footer p {
+    color: #c9d1d9;
+}
+
+.footer-links {
+    margin: 20px 0;
+}
+
+.footer-links a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    transition: 0.3s ease;
+    font-weight: bold;
+}
+
+.footer-links a:hover {
+    color: #4CAF50;
+}
+
+.copyright {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #888;
+}
