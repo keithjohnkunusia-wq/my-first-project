@@ -95,3 +95,30 @@ h2 {
     background-color: #f4f4f4;
     color: black;
 }
+html {
+    scroll-behavior: smooth;
+}
+section {
+    animation: fadeInUp 1s ease;
+}
+
+@keyframes fadeInUp {
+
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+button {
+    transition: 0.3s ease;
+}
+
+button:hover {
+    transform: scale(1.05);
+}
