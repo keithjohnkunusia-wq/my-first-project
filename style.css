@@ -5,6 +5,7 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    overflow-x: hidden;
 }
 
 html {
@@ -387,16 +388,19 @@ button:hover {
 @media (max-width: 768px) {
 
     .navbar {
-        padding: 15px 20px;
+        padding: 15px 15px;
+        gap: 10px;
     }
 
     .logo {
-        font-size: 20px;
+        font-size: 16px;
+        max-width: 110px;
+        overflow: hidden;
     }
 
     .menu-toggle {
         display: block;
-        font-size: 30px;
+        font-size: 28px;
     }
 
     .nav-links {
@@ -432,7 +436,7 @@ button:hover {
 
     .theme-toggle {
         top: 12px;
-        right: 70px;
+        right: 60px;
         padding: 8px 12px;
     }
 
