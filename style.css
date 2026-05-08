@@ -37,6 +37,7 @@ html {
     display: flex;
     list-style: none;
     gap: 25px;
+    margin-right: 90px;
 }
 
 .nav-links a {
@@ -49,6 +50,27 @@ html {
 .nav-links a:hover,
 .nav-links a.active {
     color: #4CAF50;
+}
+
+/* DARK/LIGHT TOGGLE */
+
+.theme-toggle {
+    position: fixed;
+    top: 15px;
+    right: 20px;
+    background-color: #161b22;
+    color: white;
+    border: 1px solid #4CAF50;
+    padding: 10px 15px;
+    border-radius: 50px;
+    cursor: pointer;
+    z-index: 2000;
+    transition: 0.3s ease;
+}
+
+.theme-toggle:hover {
+    background-color: #4CAF50;
+    transform: scale(1.05);
 }
 
 /* HAMBURGER */
@@ -243,6 +265,32 @@ button:hover {
     width: 100%;
 }
 
+/* SOCIAL LINKS */
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.social-links a {
+    text-decoration: none;
+    color: white;
+    background-color: #161b22;
+    padding: 14px 28px;
+    border-radius: 12px;
+    border: 1px solid #333;
+    transition: 0.3s ease;
+    font-weight: bold;
+}
+
+.social-links a:hover {
+    transform: translateY(-5px);
+    border-color: #4CAF50;
+    color: #4CAF50;
+}
+
 /* ANIMATION */
 
 .hidden {
@@ -289,7 +337,9 @@ button:hover {
 .light-mode .service-card,
 .light-mode .project-card,
 .light-mode .skill-box,
-.light-mode #contact-form {
+.light-mode #contact-form,
+.light-mode .social-links a,
+.light-mode .footer {
     background-color: #f4f4f4;
     color: black;
 }
@@ -300,6 +350,11 @@ button:hover {
 
 .light-mode #contact-form input,
 .light-mode #contact-form textarea {
+    background-color: white;
+    color: black;
+}
+
+.light-mode .theme-toggle {
     background-color: white;
     color: black;
 }
@@ -326,6 +381,7 @@ button:hover {
         padding: 20px;
         border-radius: 12px;
         background-color: #161b22;
+        margin-right: 0;
     }
 
     .nav-links.active {
@@ -347,34 +403,8 @@ button:hover {
         max-width: 300px;
     }
 
-}
-/* SOCIAL LINKS */
-
-.social-links {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 20px;
-}
-
-.social-links a {
-    text-decoration: none;
-    color: white;
-    background-color: #161b22;
-    padding: 14px 28px;
-    border-radius: 12px;
-    border: 1px solid #333;
-    transition: 0.3s ease;
-    font-weight: bold;
-}
-
-.social-links a:hover {
-    transform: translateY(-5px);
-    border-color: #4CAF50;
-    color: #4CAF50;
-}
-
-.light-mode .social-links a {
-    background-color: #f4f4f4;
-    color: black;
+    .theme-toggle {
+        top: 15px;
+        right: 70px;
+    }
 }
