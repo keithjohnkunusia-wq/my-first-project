@@ -348,3 +348,33 @@ button:hover {
     }
 
 }
+/* SOCIAL LINKS */
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.social-links a {
+    text-decoration: none;
+    color: white;
+    background-color: #161b22;
+    padding: 14px 28px;
+    border-radius: 12px;
+    border: 1px solid #333;
+    transition: 0.3s ease;
+    font-weight: bold;
+}
+
+.social-links a:hover {
+    transform: translateY(-5px);
+    border-color: #4CAF50;
+    color: #4CAF50;
+}
+
+.light-mode .social-links a {
+    background-color: #f4f4f4;
+    color: black;
+}
