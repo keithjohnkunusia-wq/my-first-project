@@ -123,3 +123,56 @@ contactForm.addEventListener("submit", function (e) {
     });
 
 });
+// ===============================
+// TYPING ANIMATION
+// ===============================
+
+const text1 = "Software Developer & Computer Science Student 💻";
+const text2 = "Building modern and interactive digital experiences 🚀";
+
+const typingText1 = document.getElementById("typing-text");
+const typingText2 = document.getElementById("typing-text2");
+
+let index1 = 0;
+let index2 = 0;
+
+function typeFirstText() {
+
+    if (index1 < text1.length) {
+
+        typingText1.innerHTML += text1.charAt(index1);
+
+        index1++;
+
+        setTimeout(typeFirstText, 60);
+
+    } else {
+
+        setTimeout(typeSecondText, 500);
+
+    }
+
+}
+
+function typeSecondText() {
+
+    if (index2 < text2.length) {
+
+        typingText2.innerHTML += text2.charAt(index2);
+
+        index2++;
+
+        setTimeout(typeSecondText, 60);
+
+    }
+
+}
+
+// CLEAR TEXT BEFORE TYPING
+
+typingText1.innerHTML = "";
+typingText2.innerHTML = "";
+
+// START ANIMATION
+
+typeFirstText();
