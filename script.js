@@ -1,7 +1,9 @@
 const button = document.getElementById("theme-toggle");
 
 button.addEventListener("click", function () {
+
     document.body.classList.toggle("light-mode");
+
 });
 
 /* TYPING EFFECT */
@@ -21,7 +23,9 @@ function typeText1() {
         index1++;
 
         setTimeout(typeText1, 80);
+
     }
+
 }
 
 function typeText2() {
@@ -33,13 +37,17 @@ function typeText2() {
         index2++;
 
         setTimeout(typeText2, 80);
+
     }
+
 }
 
 typeText1();
 
 setTimeout(() => {
+
     typeText2();
+
 }, 3200);
 
 /* SCROLL ANIMATION */
@@ -53,10 +61,6 @@ const observer = new IntersectionObserver((entries) => {
         if (entry.isIntersecting) {
 
             entry.target.classList.add("show");
-
-        } else {
-
-            entry.target.classList.remove("show");
 
         }
 
@@ -111,5 +115,55 @@ const navMenu = document.querySelector(".nav-links");
 menuToggle.addEventListener("click", () => {
 
     navMenu.classList.toggle("active");
+
+});
+
+/* EMAILJS */
+
+emailjs.init("gZ_HspRCZ_uyUCq8x");
+
+/* CONTACT FORM */
+
+const contactForm = document.getElementById("contact-form");
+
+contactForm.addEventListener("submit", function (e) {
+
+    e.preventDefault();
+
+    const sendBtn = document.getElementById("send-btn");
+
+    sendBtn.innerHTML = "Sending...";
+
+    emailjs.sendForm(
+        "service_98no1s2",
+        "template_wy5tqai",
+        this
+    )
+
+    .then(() => {
+
+        sendBtn.innerHTML = "Message Sent ✓";
+
+        alert("Message sent successfully!");
+
+        contactForm.reset();
+
+        setTimeout(() => {
+
+            sendBtn.innerHTML = "Send Message";
+
+        }, 3000);
+
+    })
+
+    .catch((error) => {
+
+        sendBtn.innerHTML = "Send Message";
+
+        alert("Failed to send message.");
+
+        console.log(error);
+
+    });
 
 });

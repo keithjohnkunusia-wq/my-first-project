@@ -2,11 +2,15 @@
 <html lang="en">
 
 <head>
+
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Keithjohn Kunusia | Portfolio</title>
 
     <link rel="stylesheet" href="style.css">
+
 </head>
 
 <body>
@@ -16,17 +20,25 @@
     <nav class="navbar">
 
         <h2 class="logo">Keithjohn</h2>
+
         <div class="menu-toggle" id="menu-toggle">
             ☰
         </div>
 
         <ul class="nav-links">
+
             <li><a href="#">Home</a></li>
+
             <li><a href="#about">About</a></li>
+
             <li><a href="#skills">Skills</a></li>
+
             <li><a href="#services">Services</a></li>
+
             <li><a href="#projects">Projects</a></li>
+
             <li><a href="#contact">Contact</a></li>
+
         </ul>
 
     </nav>
@@ -39,7 +51,9 @@
 
     <header class="hero">
 
-        <img src="Images/image keith.png" alt="Keithjohn Kunusia" class="profile-pic">
+        <img src="Images/image keith.png"
+            alt="Keithjohn Kunusia"
+            class="profile-pic">
 
         <h1>Keithjohn Kunusia 👋</h1>
 
@@ -50,19 +64,22 @@
         <div class="hero-buttons">
 
             <a href="#about">
+
                 <button>About Me ↓</button>
+
             </a>
 
             <a href="https://github.com/keithjohnkunusia-wq"
-                target="_blank"
-                rel="noopener noreferrer">
+                target="_blank">
 
                 <button>View My GitHub</button>
 
             </a>
 
-            <a href="mailto:keithjohnkunusia@gmail.com">
+            <a href="#contact">
+
                 <button>Contact Me</button>
+
             </a>
 
         </div>
@@ -76,13 +93,9 @@
         <h2>About Me</h2>
 
         <p>
-            I am Keithjohn Kunusia, a passionate Software Developer and
-            Computer Science student focused on building modern,
+            I am Keithjohn Kunusia, a passionate Software Developer
+            and Computer Science student focused on building modern,
             responsive, and interactive web applications.
-
-            I enjoy solving real-world problems through technology,
-            designing user-friendly digital experiences, and continuously
-            improving my software development skills to create impactful solutions.
         </p>
 
     </section>
@@ -115,9 +128,8 @@
                 <h3>Web Development</h3>
 
                 <p>
-                    Designing and developing modern, responsive,
-                    and high-performance websites for individuals,
-                    brands, and businesses.
+                    Designing and developing modern,
+                    responsive, and high-performance websites.
                 </p>
 
             </div>
@@ -127,20 +139,19 @@
                 <h3>UI/UX Design</h3>
 
                 <p>
-                    Creating clean, user-friendly, and visually appealing
-                    interfaces that improve user experience and engagement.
+                    Creating clean and modern interfaces
+                    that improve user experience.
                 </p>
 
             </div>
 
             <div class="service-card">
 
-                <h3>Portfolio Website Creation</h3>
+                <h3>Portfolio Websites</h3>
 
                 <p>
-                    Building professional portfolio websites for students,
-                    developers, creatives, and businesses to showcase
-                    their work online.
+                    Building professional portfolio websites
+                    for developers and businesses.
                 </p>
 
             </div>
@@ -151,99 +162,88 @@
 
     <!-- PROJECTS -->
 
-<!-- PROJECTS -->
+    <section id="projects" class="projects hidden">
 
-<section id="projects" class="projects hidden">
+        <h2>Projects</h2>
 
-    <h2>Projects</h2>
+        <div class="projects-container">
 
-    <div class="projects-container">
+            <div class="project-card">
 
-        <div class="project-card">
+                <img src="Images/portfolio.png"
+                    alt="Portfolio Website">
 
-            <img src="Images/portfolio.png" alt="Portfolio Website">
+                <h3>Personal Portfolio Website</h3>
 
-            <h3>Personal Portfolio Website</h3>
+                <p>
+                    Modern responsive portfolio website featuring
+                    animations, dark/light mode, hamburger menu,
+                    smooth scrolling, and EmailJS contact form.
+                </p>
 
-            <p>
-                A modern responsive portfolio website featuring
-                dark/light mode, smooth animations,
-                hamburger menu, responsive design,
-                and interactive UI components.
-            </p>
+                <div class="project-buttons">
 
-            <div class="project-buttons">
+                    <a href="#">
 
-                <a href="#">
-                    <button>Live Demo</button>
-                </a>
+                        <button>Live Demo</button>
 
-                <a href="https://github.com/keithjohnkunusia-wq"
-                    target="_blank">
+                    </a>
 
-                    <button>GitHub</button>
+                    <a href="https://github.com/keithjohnkunusia-wq"
+                        target="_blank">
 
-                </a>
+                        <button>GitHub</button>
+
+                    </a>
+
+                </div>
 
             </div>
 
         </div>
 
-    </div>
-
-</section>
+    </section>
 
     <!-- CONTACT -->
 
-    <section id="contact" class="socials hidden">
+    <section id="contact" class="contact hidden">
 
-        <h2>Connect With Me</h2>
+        <h2>Contact Me</h2>
 
-        <div class="social-links">
+        <div class="contact-container">
 
-            <a href="https://instagram.com/254keithjohn"
-                target="_blank"
-                rel="noopener noreferrer">
+            <form id="contact-form">
 
-                <button>Instagram</button>
+                <input
+                    type="text"
+                    name="name"
+                    placeholder="Your Name"
+                    required
+                >
 
-            </a>
+                <input
+                    type="email"
+                    name="email"
+                    placeholder="Your Email"
+                    required
+                >
 
-            <a href="https://www.tiktok.com/@spice.og"
-                target="_blank"
-                rel="noopener noreferrer">
+                <textarea
+                    name="message"
+                    rows="7"
+                    placeholder="Your Message"
+                    required
+                ></textarea>
 
-                <button>TikTok</button>
+                <button type="submit" id="send-btn">
 
-            </a>
+                    Send Message
 
-            <a href="https://www.linkedin.com/in/keithjohn-kunusia-46b04b409/"
-                target="_blank"
-                rel="noopener noreferrer">
+                </button>
 
-                <button>LinkedIn</button>
-
-            </a>
-
-            <a href="https://wa.me/254701753306"
-                target="_blank"
-                rel="noopener noreferrer">
-
-                <button>WhatsApp</button>
-
-            </a>
+            </form>
 
         </div>
-
-    </section>
-
-    <!-- CV -->
-
-    <section id="cv" class="hidden">
-
-        <a href="Keith-CV.pdf" download>
-            <button class="cv-button">Download My CV</button>
-        </a>
 
     </section>
 
@@ -267,10 +267,16 @@
         </div>
 
         <p class="copyright">
+
             © 2026 Keithjohn Kunusia. All Rights Reserved.
+
         </p>
 
     </footer>
+
+    <!-- EMAILJS -->
+
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 
     <!-- JAVASCRIPT -->
 
