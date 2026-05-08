@@ -86,9 +86,9 @@ window.addEventListener("scroll", () => {
 // EMAILJS SETUP
 // ===============================
 
-// Initialize EmailJS
-
-emailjs.init("gZ_HspRCZ_uyUCq8x");
+emailjs.init({
+    publicKey: "gZ_HspRCZ_uyUCq8x",
+});
 
 // ===============================
 // CONTACT FORM
@@ -101,8 +101,8 @@ contactForm.addEventListener("submit", function (e) {
     e.preventDefault();
 
     emailjs.sendForm(
-        "service_98no1s2", // Service ID
-        "m1xrwno",         // Template ID
+        "service_98no1s2",
+        "m1xrwno",
         this
     )
 
@@ -116,9 +116,9 @@ contactForm.addEventListener("submit", function (e) {
 
     .catch((error) => {
 
-        alert("Failed to send message.");
-
         console.log(error);
+
+        alert("Failed to send message.");
 
     });
 
