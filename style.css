@@ -158,51 +158,58 @@ section {
 
 /* PROJECTS */
 
-.project-card {
-    background-color: #161b22;
-    padding: 30px;
-    border-radius: 18px;
-    transition: 0.4s ease;
-    cursor: pointer;
-    border: 1px solid #333;
-    width: 70%;
-    margin: auto;
-}
-/* PROJECT CONTAINER */
-
 .projects-container {
     display: flex;
     justify-content: center;
+    align-items: stretch;
     flex-wrap: wrap;
     gap: 30px;
     width: 90%;
     margin: auto;
 }
 
-/* PROJECT IMAGE */
+.project-card {
+    background-color: #161b22;
+    width: 350px;
+    border-radius: 20px;
+    overflow: hidden;
+    border: 1px solid #333;
+    transition: 0.4s ease;
+    text-align: left;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+}
 
 .project-card img {
     width: 100%;
-    border-radius: 15px;
-    margin-bottom: 20px;
+    height: 220px;
+    object-fit: cover;
+    display: block;
     transition: 0.4s ease;
 }
 
-/* PROJECT BUTTONS */
-
-.project-buttons {
-    margin-top: 20px;
+.project-card h3 {
+    color: #4CAF50;
+    padding: 20px 20px 10px;
+    font-size: 24px;
 }
 
-/* IMAGE HOVER EFFECT */
+.project-card p {
+    padding: 0 20px;
+    font-size: 16px;
+    color: #c9d1d9;
+}
 
-.project-card:hover img {
-    transform: scale(1.05);
+.project-buttons {
+    padding: 20px;
 }
 
 .project-card:hover {
-    transform: translateY(-10px);
+    transform: translateY(-10px) scale(1.02);
     box-shadow: 0 10px 25px rgba(0, 255, 100, 0.3);
+}
+
+.project-card:hover img {
+    transform: scale(1.05);
 }
 
 /* BUTTONS */
@@ -267,7 +274,8 @@ button:hover {
     color: black;
 }
 
-.light-mode .service-card p {
+.light-mode .service-card p,
+.light-mode .project-card p {
     color: #333;
 }
 
@@ -378,7 +386,6 @@ button:hover {
 
     .project-card {
         width: 90%;
-        padding: 20px;
     }
 
     .profile-pic {
