@@ -4,6 +4,8 @@ button.addEventListener("click", function () {
     document.body.classList.toggle("light-mode");
 });
 
+/* TYPING EFFECT */
+
 const text1 = "Software Developer & Computer Science Student 💻";
 const text2 = "Building modern and interactive digital experiences 🚀";
 
@@ -60,6 +62,8 @@ const observer = new IntersectionObserver((entries) => {
 
     });
 
+}, {
+    threshold: 0.2
 });
 
 hiddenElements.forEach((el) => observer.observe(el));
@@ -78,7 +82,9 @@ window.addEventListener("scroll", () => {
         const sectionTop = section.offsetTop;
 
         if (pageYOffset >= sectionTop - 200) {
+
             current = section.getAttribute("id");
+
         }
 
     });
@@ -88,7 +94,9 @@ window.addEventListener("scroll", () => {
         link.classList.remove("active");
 
         if (link.getAttribute("href") === "#" + current) {
+
             link.classList.add("active");
+
         }
 
     });
