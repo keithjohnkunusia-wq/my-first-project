@@ -19,8 +19,6 @@ themeToggle.addEventListener("click", () => {
 
     document.body.classList.toggle("light-mode");
 
-    // CHANGE ICON
-
     if (document.body.classList.contains("light-mode")) {
         themeToggle.innerHTML = "☀️";
     } else {
@@ -83,47 +81,6 @@ window.addEventListener("scroll", () => {
 });
 
 // ===============================
-// EMAILJS SETUP
-// ===============================
-
-emailjs.init({
-    publicKey: "gZ_HspRCZ_uyUCq8x",
-});
-
-// ===============================
-// CONTACT FORM
-// ===============================
-
-const contactForm = document.getElementById("contact-form");
-
-contactForm.addEventListener("submit", function (e) {
-
-    e.preventDefault();
-
-    emailjs.sendForm(
-        "service_98no1s2",
-        "m1xrwno",
-        this
-    )
-
-    .then(() => {
-
-        alert("Message sent successfully!");
-
-        contactForm.reset();
-
-    })
-
-    .catch((error) => {
-
-        console.log(error);
-
-        alert("Failed to send message.");
-
-    });
-
-});
-// ===============================
 // TYPING ANIMATION
 // ===============================
 
@@ -168,11 +125,47 @@ function typeSecondText() {
 
 }
 
-// CLEAR TEXT BEFORE TYPING
-
 typingText1.innerHTML = "";
 typingText2.innerHTML = "";
 
-// START ANIMATION
-
 typeFirstText();
+
+// ===============================
+// EMAILJS
+// ===============================
+
+emailjs.init("gZ_HspRCZ_uyUCq8x");
+
+// ===============================
+// CONTACT FORM
+// ===============================
+
+const contactForm = document.getElementById("contact-form");
+
+contactForm.addEventListener("submit", function (e) {
+
+    e.preventDefault();
+
+    emailjs.sendForm(
+        "service_98no1s2",
+        "m1xrwno",
+        this
+    )
+
+    .then(function () {
+
+        alert("Message sent successfully!");
+
+        contactForm.reset();
+
+    })
+
+    .catch(function (error) {
+
+        console.log(error);
+
+        alert("Failed to send message.");
+
+    });
+
+});
