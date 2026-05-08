@@ -240,17 +240,19 @@ button:hover {
     color: #333;
 }
 
-/* ANIMATIONS */
+/* SCROLL ANIMATIONS */
 
 .hidden {
     opacity: 0;
-    transform: translateY(50px);
+    filter: blur(5px);
+    transform: translateX(-100px);
     transition: all 1s ease;
 }
 
 .show {
     opacity: 1;
-    transform: translateY(0);
+    filter: blur(0);
+    transform: translateX(0);
 }
 
 /* FOOTER */

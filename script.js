@@ -40,6 +40,8 @@ setTimeout(() => {
     typeText2();
 }, 3200);
 
+/* SCROLL ANIMATION */
+
 const hiddenElements = document.querySelectorAll(".hidden");
 
 const observer = new IntersectionObserver((entries) => {
@@ -47,7 +49,13 @@ const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
 
         if (entry.isIntersecting) {
+
             entry.target.classList.add("show");
+
+        } else {
+
+            entry.target.classList.remove("show");
+
         }
 
     });
@@ -55,6 +63,8 @@ const observer = new IntersectionObserver((entries) => {
 });
 
 hiddenElements.forEach((el) => observer.observe(el));
+
+/* ACTIVE NAVBAR */
 
 const sections = document.querySelectorAll("section");
 const navLinks = document.querySelectorAll(".nav-links a");
@@ -84,9 +94,14 @@ window.addEventListener("scroll", () => {
     });
 
 });
+
+/* HAMBURGER MENU */
+
 const menuToggle = document.getElementById("menu-toggle");
 const navMenu = document.querySelector(".nav-links");
 
 menuToggle.addEventListener("click", () => {
+
     navMenu.classList.toggle("active");
+
 });
