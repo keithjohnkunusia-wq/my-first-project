@@ -83,6 +83,14 @@ window.addEventListener("scroll", () => {
 });
 
 // ===============================
+// EMAILJS SETUP
+// ===============================
+
+// Initialize EmailJS
+
+emailjs.init("gZ_HspRCZ_uyUCq8x");
+
+// ===============================
 // CONTACT FORM
 // ===============================
 
@@ -92,8 +100,26 @@ contactForm.addEventListener("submit", function (e) {
 
     e.preventDefault();
 
-    alert("Message sent successfully!");
+    emailjs.sendForm(
+        "service_98no1s2", // Service ID
+        "m1xrwno",         // Template ID
+        this
+    )
 
-    contactForm.reset();
+    .then(() => {
+
+        alert("Message sent successfully!");
+
+        contactForm.reset();
+
+    })
+
+    .catch((error) => {
+
+        alert("Failed to send message.");
+
+        console.log(error);
+
+    });
 
 });
