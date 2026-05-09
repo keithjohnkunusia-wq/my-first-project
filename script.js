@@ -169,3 +169,18 @@ contactForm.addEventListener("submit", function (e) {
     });
 
 });
+// ===============================
+// AUTO CLOSE MOBILE MENU
+// ===============================
+
+const navLinksItems = document.querySelectorAll(".nav-links a");
+
+navLinksItems.forEach(link => {
+
+    link.addEventListener("click", () => {
+
+        navLinks.classList.remove("active");
+
+    });
+
+});
